@@ -57,6 +57,30 @@ body {
     letter-spacing: .1rem;
 }
 
+.menu li a:hover {
+    display: inline-block;
+    position: relative;
+    columns: #222;
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.menu li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .grid-section {
     grid-column: 2 / 4;
     width: 100%;
@@ -105,6 +129,7 @@ body {
     height: 322px;
     overflow-y: scroll;
     grid-column: 2;
+    margin-top: -0.2px;
 }
 
 .animais-lista::-webkit-scrollbar {
