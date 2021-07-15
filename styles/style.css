@@ -132,6 +132,10 @@ body {
     margin-top: -0.2px;
 }
 
+.animais-lista li {
+    cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
     width: 18px;
 }
